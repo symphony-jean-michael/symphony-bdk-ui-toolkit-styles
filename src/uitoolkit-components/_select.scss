@@ -53,6 +53,7 @@
             &__label,
             &__remove {
               color: $--tk-main-text-color;
+              padding: 2px;
             }
             &__remove {
               font-size: 10px;
@@ -94,6 +95,7 @@
         display: none;
       }
       .tk-select__indicator {
+        color: inherit;
         &.tk-select__dropdown-indicator {
           color: inherit;
           .tk-select__single-value {
