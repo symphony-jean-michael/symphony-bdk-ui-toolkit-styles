@@ -25,22 +25,46 @@
             background-position-x: 96%;
             background-position-y: 50%;
             &.tk-select__control {
+                position: relative;
+                @extend .tk-input__container;
+                &--is-focused {
+                    .tk-input__icon {
+                        background-color:  $--tk-input-default-inactive-color;
+                        border-color:  $--tk-input-default-inactive-color;
+                    }
+                }
                 &--menu-is-open,
                 &--menu-is-focused {
                     color: $--tk-input-default-active-color;
                     box-shadow: inset 0 0 0 2px $--tk-input-default-focus-border-color;
                     border-color: $--tk-input-default-focus-border-color;
+                    .tk-input__icon {
+                        color: $scolor-white;
+                        box-shadow: inset 0 0 0 2px $--tk-input-default-focus-border-color;
+                        border-color: $--tk-input-default-focus-border-color;
+                        background-color: $--tk-input-default-focus-border-color;
+                    }
                 }
                 &--is-disabled {
                     color: $--tk-input-default-inactive-color;
                     background-color: $--tk-input-disabled-background-color;
                 }
             }
+           
+           
             .tk-select__value-container {
                 .tk-select__multi-value {
                     padding: 0;
-                    background-color: $--tk-list-tag-color;
+                    box-sizing: border-box;
+                    min-height: 24px;
+                    border-radius: 4px;
+                    background: $--tk-tag-background-color;
+                    border: 1px solid $--tk-tag-border-color;
                     color: $--tk-main-text-color;
+                    &:hover {
+                        background: $--tk-tag-background-hover-color;
+                        border: 1px solid $--tk-tag-border-hover-color;
+                    }
                     &__label,
                     &__remove {
                         color: $--tk-main-text-color;
@@ -55,8 +79,12 @@
                         }
                     }
                 }
+                .tk-select__single-value {
+                    color: inherit;
+                }
             }
         }
+      
         &__menu {
             background-color: $--tk-list-background-color;
             margin-top: 6px;
@@ -81,5 +109,24 @@
         .tk-select__indicator-separator {
             display: none;
         }
+        .tk-select__indicator {
+            &.tk-select__dropdown-indicator {
+                color: inherit;
+                .tk-select__single-value{
+                    color: inherit;
+                }
+        }
     }
+}
+.tk-input__container {
+    &.tk-select__control {
+        .tk-select__value-container {
+            margin-left: 28px;
+        }
+    }
+}
+.tk-select__control {
+.tk-select__value-container {
+    margin-left: 0px;
+}}
 }
