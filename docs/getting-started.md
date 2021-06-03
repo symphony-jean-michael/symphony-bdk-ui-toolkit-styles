@@ -78,7 +78,7 @@ $UITOOLKIT_REM_BASE: 14;
 
 ## 🧪 Sandbox
 
-<iframe src="https://codesandbox.io/embed/serverless-wood-ty6t6?fontsize=14&hidenavigation=1&theme=dark"
+<iframe src="https://codesandbox.io/embed/ui-toolkit-styles-sandbox-ty6t6?fontsize=14&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
      title="ui-toolkit-styles-sandbox"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
